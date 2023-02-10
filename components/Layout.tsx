@@ -23,16 +23,17 @@ export const Layout = ({ children }: Props) => {
                     <p>The AdkContainers are attached on the inital render cycle and stay attached until page refresh, or by passing the <code>reloadable</code> prop and calling <code>reloadContainers()</code>.</p>
                 </div>
                 <section>
+                    <p>Always rendered</p>
                     <div>
-                        <p>Only reloaded on page refresh:</p>
+                        <small>Only reloaded on page refresh:</small>
                         <AdkContainer id="my-container" />
                     </div>
                     <div>
-                        <p>Reloaded by clicking RELOAD button:</p>
+                        <small>Also reloaded by clicking RELOAD button:</small>
                         <AdkContainer id="my-container" reloadable="testId" />
                     </div>
                     <div>
-                        <p>Also reloaded on route change:</p>
+                        <small>Also reloaded on route change:</small>
                         <AdkContainer id="my-container" reloadable="routeChange" />
                     </div>
                 </section>
