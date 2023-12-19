@@ -1,4 +1,4 @@
-import { AdkContainer } from '@advisible/adk-nextjs'
+import { AdkContainer } from '@advisible/adk-react'
 
 export default function Test() {
     return (

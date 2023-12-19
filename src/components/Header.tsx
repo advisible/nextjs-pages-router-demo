@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { useAdk } from '@advisible/adk-nextjs'
+import { reloadContainers } from '@advisible/adk-react'
 
 import { Logo } from './Logo'
 
@@ -11,15 +11,15 @@ const LINKS = [
 ]
 
 export const Header = () => {
-    const { reloadContainers } = useAdk()
     const { pathname } = useRouter()
     const prevRef = useRef(pathname)
 
     useEffect(() => {
-        if (prevRef.current === pathname) return
-        prevRef.current = pathname
-        reloadContainers({ reloadId: 'routeChange' })
-    }, [pathname, reloadContainers])
+        if (prevRef.current !== pathname) {
+            prevRef.current = pathname
+            reloadContainers({ reloadId: 'routeChange' })
+        }
+    }, [pathname])
 
     return (
         <header>
@@ -36,7 +36,7 @@ export const Header = () => {
                             className={href === pathname ? 'active' : undefined}
                         >
                             {label}
-                        </Link>
+                        </Link>,
                     )}
                     <button onClick={() => reloadContainers()}>RELOAD</button>
                 </nav>

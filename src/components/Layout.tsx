@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import { ReactNode } from 'react'
-import { AdkContainer } from '@advisible/adk-nextjs'
+import { AdkContainer } from '@advisible/adk-react'
 
 import { Header } from './Header'
 
@@ -8,7 +8,8 @@ type Props = {
     children: ReactNode
 }
 
-export const Layout = ({ children }: Props) => {
+export const Layout = (props: Props) => {
+    const { children } = props
     return (
         <>
             <Head>
