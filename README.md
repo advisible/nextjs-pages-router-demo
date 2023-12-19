@@ -1,6 +1,6 @@
 ## Advisible Next.js demo
 
-This demo app shows how to use the ADK wrapper [adk-react](https://www.npmjs.com/package/@advisible/adk-react) with Next.js.
+This demo app shows how to use the ADK wrapper [adk-react](https://www.npmjs.com/package/@advisible/adk-react) with Next.js and Next.js Router.
 
 A running instance of the app can be found here: https://advisible-nextjs-demo.vercel.app
 

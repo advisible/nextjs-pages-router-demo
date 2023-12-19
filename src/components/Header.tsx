@@ -7,7 +7,7 @@ import { Logo } from './Logo'
 
 const LINKS = [
     { href: '/', label: 'HOME' },
-    { href: '/test', label: 'TEST' },
+    { href: '/other', label: 'OTHER' },
 ]
 
 export const Header = () => {
@@ -24,16 +24,13 @@ export const Header = () => {
     return (
         <header>
             <div>
-                <div className="logo-container">
-                    <Logo />
-                    <span className="logo-text">ADVISIBLE | NEXT.JS DEMO</span>
-                </div>
+                <Logo />
                 <nav>
                     {LINKS.map(({ href, label }) =>
                         <Link
                             key={href}
                             href={href}
-                            className={href === pathname ? 'active' : undefined}
+                            className={'button' + (href === pathname ? ' active' : '')}
                         >
                             {label}
                         </Link>,

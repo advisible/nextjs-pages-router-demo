@@ -14,19 +14,23 @@ p {
     margin: 0;
 }
 
+h1 {
+    margin: 20px 0 0;
+}
+
 h3 {
     margin: 0 0 5px;
 }
 
-a {
+a.button {
     color: var(--color-advisible);
     text-decoration: none;
     border-radius: var(--border-radius);
     padding: 5px 10px;
-    font-size: 14px;
+    font-size: 12px;
 }
 
-a:hover {
+a.button:hover {
     background-color: #8ac6ff3a;
 }
 
@@ -40,7 +44,7 @@ button {
     padding: 5px 10px;
     border: none;
     border-radius: var(--border-radius);
-    font-size: 14px;
+    font-size: 12px;
 }
 
 button:hover {
@@ -61,24 +65,16 @@ body {
 
 header {
     box-shadow: var(--box-shadow);
+    position: sticky;
+    top: 0;
+    background: #fff;
+    z-index: 1;
 }
 
-header>div {
+header > div {
     padding: 15px var(--spacing-gutters);
     display: flex;
     justify-content: space-between;
-}
-
-.logo-container {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.logo-text {
-    font-weight: bold;
-    letter-spacing: 0.8px;
-    font-size: 12px;
 }
 
 .logo {
@@ -89,10 +85,10 @@ header>div {
 nav {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
 }
 
-header>div,
+header > div,
 main {
     max-width: var(--max-width);
     margin: 0 auto;
@@ -103,9 +99,10 @@ main {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    padding-bottom: 50px;
 }
 
-main>section {
+main > section {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -116,18 +113,18 @@ main>section {
     box-shadow: var(--box-shadow);
 }
 
-main>section p {
+main > section p {
     font-weight: bold;
 }
 
-main>section,
+main > section,
 .home,
-.test {
+.other {
     padding: 15px;
 }
 
-.home>p,
-.test>p {
+.home > p,
+.other > p {
     font-weight: bold;
 }
 
@@ -138,9 +135,23 @@ main>section,
     box-shadow: var(--box-shadow);
 }
 
-.test {
+.other {
     background-color: rgb(231, 255, 222);
     border: 1px solid rgb(192, 236, 176);
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
+}
+
+@media (min-width: 601px) {
+    nav {
+        gap: 20px;
+    }
+
+    a.button {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 14px;
+    }
 }
