@@ -1,8 +1,9 @@
-import { useEffect, useRef } from "react"
-import Link from "next/link"
-import { useRouter } from "next/router"
-import { Logo } from "./Logo"
-import { useAdk } from "../adk/useAdk"
+import { useEffect, useRef } from 'react'
+import Link from 'next/link'
+import { useRouter } from 'next/router'
+import { useAdk } from '@advisible/adk-nextjs'
+
+import { Logo } from './Logo'
 
 const LINKS = [
     { href: '/', label: 'HOME' },

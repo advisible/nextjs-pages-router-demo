@@ -1,7 +1,8 @@
-import Head from "next/head"
-import { ReactNode } from "react"
-import { AdkContainer } from "../adk/AdkContainer"
-import { Header } from "./Header"
+import Head from 'next/head'
+import { ReactNode } from 'react'
+import { AdkContainer } from '@advisible/adk-nextjs'
+
+import { Header } from './Header'
 
 type Props = {
     children: ReactNode
