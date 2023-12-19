@@ -1,17 +1,12 @@
 ## Advisible Next.js demo
 
-Start development server:
+The app can be found here: https://advisible-nextjs-demo.vercel.app/
+
+If you want to play around with the code locally:
 
 ```bash
 npm install
 npm run dev
-```
-
-Or build and run:
-```bash
-npm install
-npm run build
-npm run start
 ```
 
 Open [http://localhost:3000](http://localhost:3000)
