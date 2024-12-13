@@ -9,7 +9,7 @@
     "upgrade": "ncu -u"
   },
   "dependencies": {
-    "@advisible/adk-react": "^0.0.9",
+    "@advisible/adk-react": "^1.0.0",
     "next": "14.0.4",
     "react": "18.2.0"
   },
