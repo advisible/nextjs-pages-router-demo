@@ -1,6 +1,6 @@
 (() => {
     const el = document.createElement('SCRIPT');
-    el.setAttribute('src', 'https://cdn.advisible.com/adk-1.20.15.js');
+    el.setAttribute('src', 'https://cdn.advisible.com/adk-1.20.16.js');
     document.head.appendChild(el)
 
     adk.cmd.push(() => {
